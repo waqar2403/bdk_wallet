@@ -2,8 +2,8 @@
 name = "bdk_wallet"
 homepage = "https://bitcoindevkit.org"
 version = "1.2.0"
-repository = "https://github.com/bitcoindevkit/bdk"
-documentation = "https://docs.rs/bdk"
+repository = "https://github.com/bitcoindevkit/bdk_wallet"
+documentation = "https://docs.rs/bdk_wallet"
 description = "A modern, lightweight, descriptor-based wallet library"
 keywords = ["bitcoin", "wallet", "descriptor", "psbt"]
 readme = "README.md"
