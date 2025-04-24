@@ -13,10 +13,11 @@ const SEND_AMOUNT: Amount = Amount::from_sat(5000);
 const STOP_GAP: usize = 5;
 const PARALLEL_REQUESTS: usize = 5;
 
-const NETWORK: Network = Network::Signet;
-const EXTERNAL_DESC: &str = "wpkh(tprv8ZgxMBicQKsPdy6LMhUtFHAgpocR8GC6QmwMSFpZs7h6Eziw3SpThFfczTDh5rW2krkqffa11UpX3XkeTTB2FvzZKWXqPY54Y6Rq4AQ5R8L/84'/1'/0'/0/*)";
-const INTERNAL_DESC: &str = "wpkh(tprv8ZgxMBicQKsPdy6LMhUtFHAgpocR8GC6QmwMSFpZs7h6Eziw3SpThFfczTDh5rW2krkqffa11UpX3XkeTTB2FvzZKWXqPY54Y6Rq4AQ5R8L/84'/1'/0'/1/*)";
-const ESPLORA_URL: &str = "http://signet.bitcoindevkit.net";
+// changed wallet descriptors that are from my regtest wallet and URL as well
+const NETWORK: Network = Network::Regtest;
+const EXTERNAL_DESC: &str = "wpkh(tprv8ZgxMBicQKsPdcJb2xWj2dTT2FE7oKsWpr15h5X3mzgpAJYktDwcsWJj8f7n3HgpNHXnur9yNyxXQmRoeNdsbA8YBaJMDZFU18vJLbFWqHX/84'/1'/0'/1/*)#fzrwq0g9";
+const INTERNAL_DESC: &str = "wpkh(tprv8ZgxMBicQKsPcuTSdeggHbMpov7sFS5cD5yHzNZ2EUmQCRSSDzaMoczdMcQ7rtvDUivJLpbRgVMgKZzKU8Sqh8cnUyeTWbRSoXK7gLVytZT/84'/1'/0'/0/*)#03r8jjqd";
+const ESPLORA_URL: &str = "http://127.0.0.1:3002";
 
 fn main() -> Result<(), anyhow::Error> {
     let mut db = Store::<bdk_wallet::ChangeSet>::open_or_create_new(DB_MAGIC.as_bytes(), DB_PATH)?;
